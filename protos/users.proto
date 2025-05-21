@@ -1,0 +1,52 @@
+syntax = "proto3";
+
+package users;
+
+service UsersService {
+  rpc FindOne (UserById) returns (UserResponse);
+  rpc FindUserByMobile (UserByMobile) returns (UserResponse);
+  rpc GetUser(GetUserRequest) returns (GetUserResponse) {}
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse) {}
+}
+
+message GetUserRequest {
+  string email = 1;
+}
+
+message GetUserResponse {
+  string name = 1;
+  string email = 2;
+}
+
+message CreateUserRequest {
+  string name = 1;
+  string email = 2;
+}
+
+message CreateUserResponse {
+  string name = 1;
+  string email = 2;
+}
+
+message UserById {
+  string userID = 1;
+}
+
+message UserByMobile {
+  string mobile = 1;
+  int32 telegramID = 2;
+ 
+}
+
+message UserResponse {
+  string userID = 1;
+  string firstName = 2;
+  string lastName = 3;
+  string idCard = 4;
+  bool exists = 5;
+}
+
+message TelegramResponse {
+ 
+  bool exists = 1;
+}

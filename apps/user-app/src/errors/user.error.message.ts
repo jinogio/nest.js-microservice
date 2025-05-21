@@ -1,0 +1,15 @@
+export enum User_Error_Message {
+  USER_EXSIST_ERROR = 'this user already exist ',
+  NOT_FOUND_USERS_LIST_ERROR = 'not found users list',
+  USER_NOT_FOUND_ERROR = 'This user Not found',
+  USER_ALREADY_DELETED_ERROR = 'This user has already been deleted',
+  USER_PAUSED_ERROR = 'This user is already paused',
+  USER_ALREADY_RESTORED_ERROR = 'This user has already been restored',
+  USER_PERMISSION_DELETED_ERROR = 'This user not has permission to delete enather user',
+  DONT_DELETE_OTHER_USER_ERROR = 'This user does not have the authority to delete another user',
+  USER_OLD_AND_NEW_PASSWORD_ERROR = 'This user old and new password are same please enter new one',
+  USER_PASSWORD_INCORRECT_ERROR = 'The password entered by the user is incorrect.',
+  USER_PERMISSION_ERROR = 'This user dont have permissions.',
+  DONT_HAVE_DELETED_USERS_LIST = 'not found any companys deleted users list',
+  USER_WRONG_ROLE = 'you are assigning the wrong role',
+}
